@@ -4,6 +4,7 @@ from .serializer import BookSerializer
 from rest_framework.response import Response
 from rest_framework import status
 
+#localhost:8000/api/books/
 class BookAPI(viewsets.ModelViewSet):
     queryset=Book.objects.all().order_by('created_at')
     serializer_class=BookSerializer
