@@ -48,3 +48,4 @@ htmlcov/
 .coverage.*
 coverage.xml
 *.cover
+.codegpt
