@@ -16,7 +16,7 @@ class BookAPI(viewsets.ModelViewSet):
                 "success":True,
                 "data":serializer.data,
                 "code":200,
-                "message":"success"
+                "message":"查詢成功!"
                 },
             status=status.HTTP_200_OK
             )
@@ -28,7 +28,7 @@ class BookAPI(viewsets.ModelViewSet):
                 "success":True,
                 'data':result.data,
                 'code':200,
-                'message':'success'
+                'message':'查詢成功!'
             },
             status=status.HTTP_200_OK
             )
@@ -42,7 +42,7 @@ class BookAPI(viewsets.ModelViewSet):
                 "success":True,
                 "data":result.data,
                 "code":201,
-                "message":"success"
+                "message":"創建成功!"
             },
                 status=status.HTTP_201_CREATED
                 )
@@ -52,7 +52,7 @@ class BookAPI(viewsets.ModelViewSet):
                 "success":False,
                 "data":result._errors,
                 "code":400,
-                "message":"Invalid data"
+                "message":"創建失敗!"
             },
                 status=status.HTTP_400_BAD_REQUEST
         )
@@ -63,7 +63,7 @@ class BookAPI(viewsets.ModelViewSet):
                 {
                     "success":True,
                     "code":204,
-                    "message":"Successfully Delete!"
+                    "message":"刪除成功!"
                 },
                 status=status.HTTP_204_NO_CONTENT
             )
@@ -77,7 +77,7 @@ class BookAPI(viewsets.ModelViewSet):
                     "success":True,
                     "data":result.data,
                     "code":200,
-                    "message":"Successfully update!"
+                    "message":"更新成功!"
                 },
                 status=status.HTTP_200_OK
             )
@@ -87,7 +87,7 @@ class BookAPI(viewsets.ModelViewSet):
                     "success":False,
                     "data":result.errors,
                     "code":400,
-                    "message":"Update fail"
+                    "message":"更新失敗!"
                 },
                 status=status.HTTP_400_BAD_REQUEST
             )
